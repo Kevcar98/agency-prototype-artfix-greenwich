@@ -3,6 +3,18 @@ const path = require('path');
 
 const dir = __dirname;
 
+// Canonical black band text per page (replaces the last dark section before footer)
+const BAND_TEXT = {
+  'index.html':              'MEET &middot; LEARN &middot; WORK &middot; SHOW',
+  'about.html':              'MEET &middot; LEARN &middot; WORK &middot; SHOW',
+  'services.html':           'MEET &middot; LEARN &middot; WORK &middot; SHOW',
+  'our-spaces.html':         'MEET &middot; LEARN &middot; WORK &middot; SHOW',
+  'community-projects.html': 'MEET &middot; LEARN &middot; WORK &middot; SHOW',
+  'venue-hire.html':         'MEET &middot; LEARN &middot; WORK &middot; SHOW',
+  'jobs.html':               'MEET &middot; LEARN &middot; WORK &middot; SHOW',
+  'contact.html':            'MEET &middot; LEARN &middot; WORK &middot; SHOW',
+};
+
 const PAGE_TITLES = {
   'index.html':              'artFix Greenwich — Life As Art',
   'about.html':              'About — artFix Greenwich',
@@ -10,9 +22,11 @@ const PAGE_TITLES = {
   'our-spaces.html':         'Our Spaces — artFix Greenwich',
   'community-projects.html': 'Community Projects — artFix Greenwich',
   'venue-hire.html':         'Venue Hire — artFix Greenwich',
-  'jobs.html':               'Jobs & Opportunities — artFix Greenwich',
+  'jobs.html':               'Jobs &amp; Opportunities — artFix Greenwich',
   'contact.html':            'Contact — artFix Greenwich',
 };
+
+const H1_CLASS = 'font-montserrat font-extrabold text-5xl md:text-7xl uppercase tracking-tight text-black leading-none mb-6';
 
 const files = [
   'index.html',
@@ -141,6 +155,9 @@ files.forEach(file => {
     html = html.replace('</head>', `${TAILWIND_CONFIG}\n</head>`);
   }
 
+  // Standardise H1 class (keep text content, fix classes)
+  html = html.replace(/<h1[^>]*>([\s\S]*?)<\/h1>/, `<h1 class="${H1_CLASS}">$1</h1>`);
+
   // Standardise <title>
   if (PAGE_TITLES[file]) {
     html = html.replace(/<title>[^<]*<\/title>/, `<title>${PAGE_TITLES[file]}</title>`);
@@ -148,6 +165,45 @@ files.forEach(file => {
 
   // Replace existing <nav> with standardised nav
   html = html.replace(/<nav[\s\S]*?<\/nav>/, NAV_HTML);
+
+  // Replace the last dark band section before footer with canonical band
+  const bandText = BAND_TEXT[file] || 'MEET &middot; LEARN &middot; WORK &middot; SHOW';
+  const canonicalBand = `<section class="bg-black w-full py-20 px-8 text-center">
+  <p class="text-white font-montserrat font-extrabold text-2xl md:text-4xl uppercase tracking-widest">${bandText}</p>
+</section>`;
+  // Split on <footer, work on pre-footer chunk to find last dark section
+  const footerIdx = html.lastIndexOf('<footer');
+  if (footerIdx !== -1) {
+    let pre = html.substring(0, footerIdx);
+    const post = html.substring(footerIdx);
+    // Find last opening <section or <div with bg-primary or bg-black
+    const darkTagRe = /<(section|div)[^>]*(?:bg-primary|bg-black)[^>]*>/g;
+    let lastMatch = null, m;
+    while ((m = darkTagRe.exec(pre)) !== null) lastMatch = m;
+    if (lastMatch) {
+      const tag = lastMatch[1];
+      const startIdx = lastMatch.index;
+      // Find matching closing tag by counting depth
+      let depth = 1, searchFrom = startIdx + lastMatch[0].length;
+      while (depth > 0 && searchFrom < pre.length) {
+        const openNext = pre.indexOf(`<${tag}`, searchFrom);
+        const closeNext = pre.indexOf(`</${tag}>`, searchFrom);
+        if (closeNext === -1) break;
+        if (openNext !== -1 && openNext < closeNext) {
+          depth++; searchFrom = openNext + 1;
+        } else {
+          depth--; searchFrom = closeNext + `</${tag}>`.length;
+        }
+      }
+      if (depth === 0) {
+        pre = pre.substring(0, startIdx) + canonicalBand + '\n';
+      }
+    } else {
+      // No dark band found — inject one just before footer
+      pre = pre + canonicalBand + '\n';
+    }
+    html = pre + post;
+  }
 
   // Replace entire <footer>…</footer> with canonical footer
   html = html.replace(/<footer[\s\S]*?<\/footer>/, FOOTER_HTML);
