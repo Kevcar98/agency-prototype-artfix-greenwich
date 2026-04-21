@@ -149,10 +149,23 @@ files.forEach(file => {
     html = html.replace(/<div class="pt-16">([\s\S]*?)<\/div>/g, '$1');
   }
 
-  // Ensure pt-24 on <main> tags
+  // Ensure pt-24 on <main> tags (fix class if present)
   html = html.replace(/<main(?![^>]*pt-24)([^>]*)>/g, (match, attrs) => {
-    return `<main${attrs} class="${(attrs.match(/class="([^"]*)"/) || ['',''])[1]} pt-24">`.replace('  pt-24', ' pt-24');
+    const existingClass = (attrs.match(/class="([^"]*)"/) || ['',''])[1];
+    const newClass = (existingClass + ' pt-24').trim();
+    if (existingClass) {
+      return match.replace(`class="${existingClass}"`, `class="${newClass}"`);
+    }
+    return `<main class="pt-24"${attrs}>`;
   });
+
+  // Wrap body content in <main class="pt-24"> if no <main> tag exists
+  if (!html.includes('<main')) {
+    html = html.replace(/(<\/nav>)([\s\S]*)(<footer)/, '$1<main class="pt-24">$2</main>\n$3');
+  }
+
+  // Remove any stray label <p> immediately before <h1> in hero sections
+  html = html.replace(/<p[^>]*(?:font-label|label-text|text-surface-tint|text-xs|text-sm)[^>]*>[\s\S]*?<\/p>(\s*<h1)/g, '$1');
 
   // Inject Google Fonts if not present
   if (!html.includes('fonts.googleapis.com/css2?family=Montserrat')) {
