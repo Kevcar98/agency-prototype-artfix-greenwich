@@ -28,6 +28,17 @@ const PAGE_TITLES = {
 
 const H1_CLASS = 'font-montserrat font-extrabold text-5xl md:text-7xl uppercase tracking-tight text-black leading-none mb-6';
 
+const PAGE_H1 = {
+  'index.html':              'artFix &mdash; Life As Art',
+  'about.html':              'About artFix',
+  'services.html':           'Our Services',
+  'our-spaces.html':         'Our Spaces',
+  'community-projects.html': 'Community Projects',
+  'venue-hire.html':         'Hire A Venue',
+  'jobs.html':               'Jobs &amp; Opportunities',
+  'contact.html':            'Get In Touch',
+};
+
 const files = [
   'index.html',
   'about.html',
@@ -155,8 +166,10 @@ files.forEach(file => {
     html = html.replace('</head>', `${TAILWIND_CONFIG}\n</head>`);
   }
 
-  // Standardise H1 class (keep text content, fix classes)
-  html = html.replace(/<h1[^>]*>([\s\S]*?)<\/h1>/, `<h1 class="${H1_CLASS}">$1</h1>`);
+  // Replace entire H1 (including inner spans) with clean canonical markup
+  if (PAGE_H1[file]) {
+    html = html.replace(/<h1[\s\S]*?<\/h1>/, `<h1 class="${H1_CLASS}">${PAGE_H1[file]}</h1>`);
+  }
 
   // Standardise <title>
   if (PAGE_TITLES[file]) {
