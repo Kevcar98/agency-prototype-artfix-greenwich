@@ -164,6 +164,31 @@ files.forEach(file => {
     html = html.replace(/(<\/nav>)([\s\S]*)(<footer)/, '$1<main class="pt-24">$2</main>\n$3');
   }
 
+  // Strip excessive vertical padding from the first hero <section> after <main>
+  // (Stitch sometimes generates py-24 / pt-32 on the hero, stacking with pt-24 on <main>)
+  html = html.replace(/(<main[^>]*>[\s\S]*?<section)([^>]*)(>)/, (match, pre, attrs, close) => {
+    // Operate on the class attribute value only
+    const cleaned = attrs.replace(/class="([^"]*)"/, (cm, cls) => {
+      const newCls = ('py-16 ' + cls
+        .replace(/\bpy-\d+\b/g, '')
+        .replace(/\bpt-\d+\b/g, '')
+        .replace(/\bpb-\d+\b/g, ''))
+        .replace(/  +/g, ' ')
+        .trim();
+      return `class="${newCls}"`;
+    });
+    return `${pre}${cleaned}${close}`;
+  });
+
+  // Strip pt-{n} from the first child div inside the hero section (inner column padding compounds the gap)
+  html = html.replace(/(<main[^>]*>[\s\S]*?<section[^>]*>[\s\S]*?<div)([^>]*)(>)/, (match, pre, attrs, close) => {
+    const cleaned = attrs.replace(/class="([^"]*)"/, (cm, cls) => {
+      const newCls = cls.replace(/\bpt-\d+\b/g, '').replace(/  +/g, ' ').trim();
+      return `class="${newCls}"`;
+    });
+    return `${pre}${cleaned}${close}`;
+  });
+
   // Remove any stray label <p> immediately before <h1> in hero sections
   html = html.replace(/<p[^>]*(?:font-label|label-text|text-surface-tint|text-xs|text-sm)[^>]*>[\s\S]*?<\/p>(\s*<h1)/g, '$1');
 
