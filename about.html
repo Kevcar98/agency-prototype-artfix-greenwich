@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About artFix</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;800&amp;family=Inter:wght@400;500;700;800&amp;family=Montserrat:wght@800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-background": "#1a1c1c",
+                        "tertiary-container": "#747474",
+                        "surface-container-high": "#e8e8e8",
+                        "primary": "#000000",
+                        "primary-fixed": "#5f5e5e",
+                        "surface-variant": "#e2e2e2",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface": "#1a1c1c",
+                        "on-primary-fixed-variant": "#e5e2e1",
+                        "tertiary-fixed": "#5e5e5e",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "outline-variant": "#c6c6c6",
+                        "on-primary-container": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "on-secondary": "#ffffff",
+                        "secondary": "#5f5e5e",
+                        "on-secondary-fixed-variant": "#3c3b3b",
+                        "on-error-container": "#410002",
+                        "error": "#ba1a1a",
+                        "surface": "#f9f9f9",
+                        "surface-dim": "#dadada",
+                        "background": "#f9f9f9",
+                        "secondary-container": "#d7d4d3",
+                        "on-tertiary-fixed-variant": "#e2e2e2",
+                        "secondary-fixed-dim": "#adabaa",
+                        "on-primary-fixed": "#ffffff",
+                        "surface-container-highest": "#e2e2e2",
+                        "outline": "#777777",
+                        "on-tertiary-fixed": "#ffffff",
+                        "tertiary": "#3b3b3b",
+                        "primary-container": "#3c3b3b",
+                        "on-tertiary": "#e2e2e2",
+                        "inverse-surface": "#2f3131",
+                        "on-surface-variant": "#474747",
+                        "on-secondary-container": "#1c1b1b",
+                        "tertiary-fixed-dim": "#474747",
+                        "on-tertiary-container": "#ffffff",
+                        "surface-container": "#eeeeee",
+                        "inverse-on-surface": "#f0f1f1",
+                        "surface-container-low": "#f3f3f4",
+                        "inverse-primary": "#c8c6c5",
+                        "on-primary": "#e5e2e1",
+                        "surface-bright": "#f9f9f9",
+                        "on-error": "#ffffff",
+                        "surface-tint": "#5f5e5e",
+                        "secondary-fixed": "#c8c6c5",
+                        "primary-fixed-dim": "#474646"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "0px"
+                    },
+                    fontFamily: {
+                        "headline": ["Montserrat", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .tracking-widest { letter-spacing: 0.15em; }
+        .text-justify { text-align: justify; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,800;0,900;1,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+</head>
+<body class="bg-surface-container-lowest text-on-background font-body min-h-screen pt-20">
+<!-- Nav (TopNavBar + Desktop) -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-black">
+  <div class="max-w-screen-xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="index.html" class="font-montserrat font-extrabold text-xl tracking-tight text-black uppercase">artFix</a>
+    <ul class="hidden md:flex items-center gap-6 text-xs font-semibold tracking-widest uppercase text-black">
+      <li><a href="index.html" class="hover:underline underline-offset-4">Home</a></li>
+      <li><a href="about.html" class="hover:underline underline-offset-4">About</a></li>
+      <li><a href="services.html" class="hover:underline underline-offset-4">Services</a></li>
+      <li><a href="our-spaces.html" class="hover:underline underline-offset-4">Our Spaces</a></li>
+      <li><a href="community-projects.html" class="hover:underline underline-offset-4">Community Projects</a></li>
+      <li><a href="venue-hire.html" class="hover:underline underline-offset-4">Venue Hire</a></li>
+      <li><a href="jobs.html" class="hover:underline underline-offset-4">Jobs &amp; Opportunities</a></li>
+      <li><a href="contact.html" class="hover:underline underline-offset-4">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+<!-- Mobile Bottom NavBar Fallback (hidden on md+) -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 bg-white border-t border-black flex justify-around items-center py-3">
+<a class="flex flex-col items-center text-black/60" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="home">home</span>
+<span class="text-[10px] font-bold uppercase tracking-widest font-label">HOME</span>
+</a>
+<a class="flex flex-col items-center text-black border-t-2 border-black pt-[2px] -mt-[4px]" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="info" style="font-variation-settings: 'FILL' 1;">info</span>
+<span class="text-[10px] font-bold uppercase tracking-widest font-label">ABOUT</span>
+</a>
+<a class="flex flex-col items-center text-black/60" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="explore">explore</span>
+<span class="text-[10px] font-bold uppercase tracking-widest font-label">SERVICES</span>
+</a>
+</nav>
+<main class="pb-20 md:pb-0" class="pb-20 md:pb-0 pt-24">
+<!-- Hero Section -->
+<section class="min-h-[819px] flex flex-col md:flex-row items-center border-b border-primary">
+<div class="w-full md:w-1/2 p-8 md:p-16 lg:p-24 flex flex-col justify-center h-full border-b md:border-b-0 md:border-r border-primary bg-surface-container-lowest">
+<h1 class="text-6xl md:text-8xl font-extrabold tracking-tighter uppercase font-headline text-primary mb-8 leading-none">ABOUT<br/>ARTFIX</h1>
+<p class="text-xl md:text-2xl font-body text-on-surface leading-relaxed max-w-2xl">
+                    artfix builds communities through the power of creativity. Our creative spaces operate as one-stop platforms, empowering you to share your creative ideas with the world.
+                </p>
+</div>
+<div class="w-full md:w-1/2 h-[512px] md:h-full min-h-[819px] bg-surface relative">
+<img alt="black and white photo of people in a creative workshop space collaborating around a large table" class="absolute inset-0 w-full h-full object-cover grayscale" data-alt="black and white high contrast documentary style photography of a diverse group of people collaborating in a bright open plan art studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbzSuQaVPbXONmxmimO2xKO3lRE5OTr7IZQzbxIWJsQYvPNAlZ40lOO9ZGzdrPGAJS5kudLHXvoaugWKZ3PO_gphLvIhv94QmhNvdb2l6aoYvt4wjQOnpJ24kBKcM1eP7JdsTJmn7jkGpvUrdXS6nl30N7-wrAiyANP1vs-hrG0HM9po9gyQoronUVlWn4tlNcdBgP6h6FmZD3SXWbUarCf3KdXw4AW-747F5WYAE1rQ1iCPuU8TkK_5CKEXreUWTCSq_1htWoMEWu"/>
+</div>
+</section>
+<!-- Editorial Quote -->
+<section class="py-24 px-8 md:px-16 lg:px-24 bg-surface border-b border-primary">
+<div class="max-w-5xl mx-auto">
+<p class="text-3xl md:text-5xl font-body italic text-primary leading-tight font-light border-l-4 border-primary pl-8 py-4">
+                    "From conception to execution — artfix is the combination of a café, school, workspace, and venue that emulates the creative process in four steps: meet, learn, work, show."
+                </p>
+</div>
+</section>
+<!-- Four Steps Grid -->
+<section class="py-24 px-8 md:px-16 lg:px-24 bg-surface-container-lowest border-b border-primary">
+<h2 class="text-sm font-bold uppercase tracking-widest font-label text-primary mb-12">THE CREATIVE PROCESS</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- MEET -->
+<div class="border border-primary p-8 bg-surface hover:bg-black hover:text-white transition-colors duration-0 group cursor-pointer h-64 flex flex-col justify-between">
+<div class="text-4xl font-headline font-extrabold uppercase group-hover:text-white text-primary">MEET</div>
+<p class="font-body text-sm text-on-surface group-hover:text-white/80">Connect with local creatives in our vibrant cafe space.</p>
+</div>
+<!-- LEARN -->
+<div class="border border-primary p-8 bg-surface hover:bg-black hover:text-white transition-colors duration-0 group cursor-pointer h-64 flex flex-col justify-between">
+<div class="text-4xl font-headline font-extrabold uppercase group-hover:text-white text-primary">LEARN</div>
+<p class="font-body text-sm text-on-surface group-hover:text-white/80">Acquire new skills through community-led workshops.</p>
+</div>
+<!-- WORK -->
+<div class="border border-primary p-8 bg-surface hover:bg-black hover:text-white transition-colors duration-0 group cursor-pointer h-64 flex flex-col justify-between">
+<div class="text-4xl font-headline font-extrabold uppercase group-hover:text-white text-primary">WORK</div>
+<p class="font-body text-sm text-on-surface group-hover:text-white/80">Develop your projects in our dedicated co-working areas.</p>
+</div>
+<!-- SHOW -->
+<div class="border border-primary p-8 bg-surface hover:bg-black hover:text-white transition-colors duration-0 group cursor-pointer h-64 flex flex-col justify-between">
+<div class="text-4xl font-headline font-extrabold uppercase group-hover:text-white text-primary">SHOW</div>
+<p class="font-body text-sm text-on-surface group-hover:text-white/80">Exhibit and perform in our versatile venue spaces.</p>
+</div>
+</div>
+</section>
+<!-- Black Band -->
+<section class="bg-primary text-white py-32 px-8 md:px-16 text-center border-b border-primary">
+<h2 class="text-4xl md:text-6xl font-headline font-extrabold tracking-tighter uppercase max-w-4xl mx-auto leading-tight">
+                LIFE AS ART —<br/>empowering everyday creators.
+            </h2>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-black text-white w-full px-8 py-16">
+  <div class="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+    <div class="flex flex-col gap-4">
+      <span class="font-montserrat font-extrabold text-xl uppercase tracking-tight">artFix</span>
+      <p class="text-xs uppercase tracking-widest text-white/60">Life As Art</p>
+      <p class="text-sm text-white/80 leading-relaxed">7 Durnford Street<br>Greenwich, SE10 9BF</p>
+    </div>
+    <div class="flex flex-col gap-3">
+      <p class="text-xs uppercase tracking-widest text-white/60 mb-2">Navigate</p>
+      <a href="index.html" class="text-sm text-white/80 hover:text-white transition-colors">Home</a>
+      <a href="about.html" class="text-sm text-white/80 hover:text-white transition-colors">About</a>
+      <a href="services.html" class="text-sm text-white/80 hover:text-white transition-colors">Services</a>
+      <a href="our-spaces.html" class="text-sm text-white/80 hover:text-white transition-colors">Our Spaces</a>
+      <a href="community-projects.html" class="text-sm text-white/80 hover:text-white transition-colors">Community Projects</a>
+      <a href="venue-hire.html" class="text-sm text-white/80 hover:text-white transition-colors">Venue Hire</a>
+      <a href="jobs.html" class="text-sm text-white/80 hover:text-white transition-colors">Jobs &amp; Opportunities</a>
+      <a href="contact.html" class="text-sm text-white/80 hover:text-white transition-colors">Contact</a>
+    </div>
+    <div class="flex flex-col gap-3">
+      <p class="text-xs uppercase tracking-widest text-white/60 mb-2">Contact</p>
+      <a href="tel:02082933096" class="text-sm text-white/80 hover:text-white transition-colors">Greenwich: 02082933096</a>
+      <a href="tel:02045474919" class="text-sm text-white/80 hover:text-white transition-colors">Kidbrooke: 02045474919</a>
+      <a href="mailto:info@artfix.org.uk" class="text-sm text-white/80 hover:text-white transition-colors">info@artfix.org.uk</a>
+      <div class="flex gap-4 mt-4">
+        <a href="https://www.facebook.com/artfixLondon" target="_blank" class="text-xs uppercase tracking-widest text-white/60 hover:text-white transition-colors">Facebook</a>
+        <a href="https://www.instagram.com/artfixlondon" target="_blank" class="text-xs uppercase tracking-widest text-white/60 hover:text-white transition-colors">Instagram</a>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-screen-xl mx-auto mt-12 pt-6 border-t border-white/20">
+    <p class="text-xs uppercase tracking-widest text-white/40">© 2025 artFix. All rights reserved.</p>
+  </div>
+</footer>
+</body></html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Services - artFix Greenwich</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;family=Montserrat:wght@800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-variant": "#e2e2e2",
+            "on-surface": "#1a1c1c",
+            "on-primary-container": "#ffffff",
+            "on-error": "#ffffff",
+            "primary-container": "#3c3b3b",
+            "surface": "#f9f9f9",
+            "secondary-fixed-dim": "#ababab",
+            "primary-fixed-dim": "#474646",
+            "inverse-primary": "#c8c6c5",
+            "surface-tint": "#5f5e5e",
+            "on-tertiary-container": "#ffffff",
+            "on-primary": "#e5e2e1",
+            "on-surface-variant": "#474747",
+            "primary-fixed": "#5f5e5e",
+            "on-secondary": "#ffffff",
+            "secondary-container": "#d4d4d4",
+            "on-error-container": "#410002",
+            "surface-container": "#eeeeee",
+            "on-secondary-fixed": "#1b1b1b",
+            "tertiary-container": "#747474",
+            "tertiary": "#3b3b3b",
+            "surface-container-high": "#e8e8e8",
+            "on-primary-fixed-variant": "#e5e2e1",
+            "on-secondary-container": "#1b1b1b",
+            "inverse-on-surface": "#f1f1f1",
+            "inverse-surface": "#2f3131",
+            "surface-dim": "#dadada",
+            "surface-bright": "#f9f9f9",
+            "tertiary-fixed": "#5e5e5e",
+            "on-tertiary-fixed": "#ffffff",
+            "on-tertiary-fixed-variant": "#e2e2e2",
+            "outline": "#777777",
+            "on-tertiary": "#e2e2e2",
+            "secondary-fixed": "#c6c6c6",
+            "background": "#f9f9f9",
+            "outline-variant": "#c6c6c6",
+            "on-background": "#1a1c1c",
+            "tertiary-fixed-dim": "#474747",
+            "primary": "#000000",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#f3f3f3",
+            "secondary": "#5e5e5e",
+            "error-container": "#ffdad6",
+            "on-primary-fixed": "#ffffff",
+            "error": "#ba1a1a",
+            "surface-container-highest": "#e2e2e2",
+            "on-secondary-fixed-variant": "#3b3b3b"
+          },
+          borderRadius: {
+            "DEFAULT": "0px",
+            "lg": "0px",
+            "xl": "0px",
+            "full": "0px"
+          },
+          fontFamily: {
+            "headline": ["Montserrat", "sans-serif"],
+            "display": ["Epilogue", "sans-serif"],
+            "body": ["Inter", "sans-serif"],
+            "label": ["Inter", "sans-serif"]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    /* Strictly enforcing 0px radius across all possible elements */
+    * { border-radius: 0px !important; }
+  </style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,800;0,900;1,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+</head>
+<body class="bg-surface-container-lowest text-on-surface font-body antialiased pt-20">
+<!-- TopAppBar Component -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-black">
+  <div class="max-w-screen-xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="index.html" class="font-montserrat font-extrabold text-xl tracking-tight text-black uppercase">artFix</a>
+    <ul class="hidden md:flex items-center gap-6 text-xs font-semibold tracking-widest uppercase text-black">
+      <li><a href="index.html" class="hover:underline underline-offset-4">Home</a></li>
+      <li><a href="about.html" class="hover:underline underline-offset-4">About</a></li>
+      <li><a href="services.html" class="hover:underline underline-offset-4">Services</a></li>
+      <li><a href="our-spaces.html" class="hover:underline underline-offset-4">Our Spaces</a></li>
+      <li><a href="community-projects.html" class="hover:underline underline-offset-4">Community Projects</a></li>
+      <li><a href="venue-hire.html" class="hover:underline underline-offset-4">Venue Hire</a></li>
+      <li><a href="jobs.html" class="hover:underline underline-offset-4">Jobs &amp; Opportunities</a></li>
+      <li><a href="contact.html" class="hover:underline underline-offset-4">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+<!-- Hero Section -->
+<section class="bg-surface-container-lowest py-24 px-8 md:px-16 lg:px-32 flex flex-col lg:flex-row items-center gap-16 border-b border-primary">
+<div class="lg:w-1/2">
+<p class="font-label text-sm uppercase tracking-[0.2em] font-bold text-surface-tint mb-4">What we do</p>
+<h1 class="font-headline text-5xl md:text-7xl font-extrabold uppercase tracking-tight text-primary leading-none mb-8">OUR SERVICES</h1>
+<p class="font-body text-lg md:text-xl text-on-surface leading-relaxed">
+        Our artfix spaces operate as a platform of exchange between community members — locals can enjoy and offer content provided by the community, for the community.
+      </p>
+</div>
+<div class="lg:w-1/2 w-full aspect-[4/3] border border-primary relative">
+<img alt="Community members collaborating in a bright, modern gallery space with exposed brick walls" class="w-full h-full object-cover filter grayscale" data-alt="Community members collaborating in a bright, modern gallery space with exposed brick walls, monochrome black and white photography style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4AkoqQq3J3CWkAxfHEdhe5zCpT1BvVH36XV0Upu8KpOGMPVnLxHyU_337BvTyI7EuZajv8Vt-oWP9UBTIQqr5LKArxckHLkEGz7ruNouCXmdLkFs8OjQV0-Nw001juNM3I09sga46QM3rmeQYkeiOmW7EakTtWknpzhPFZiLvoV8d2GU0RZOu5B6PQp2Fj6t8x82tf0ySEXBoTTN33f5o-MQ8f9BWVfUgucTfRlYrC1YCI3XQ_7ano3YFlxCS8b2XBvQ6PQrrSBtv"/>
+</div>
+</section>
+<!-- Services Grid -->
+<section class="bg-surface py-24 px-8 md:px-16 lg:px-32 border-b border-primary">
+<div class="mb-16">
+<h2 class="font-headline text-3xl font-extrabold uppercase tracking-tight text-primary">THE PLATFORM</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest border border-primary p-8 flex flex-col group hover:bg-primary transition-colors duration-0">
+<div class="mb-6 text-primary group-hover:text-on-primary">
+<span class="material-symbols-outlined text-4xl" data-icon="coffee" style="font-variation-settings: 'FILL' 0;">coffee</span>
+</div>
+<h3 class="font-headline text-xl font-extrabold uppercase text-primary group-hover:text-on-primary mb-4 tracking-tight">CAFÉ</h3>
+<p class="font-body text-on-surface group-hover:text-on-primary leading-relaxed mt-auto">
+          Live shows, artwork exhibition.
+        </p>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest border border-primary p-8 flex flex-col group hover:bg-primary transition-colors duration-0">
+<div class="mb-6 text-primary group-hover:text-on-primary">
+<span class="material-symbols-outlined text-4xl" data-icon="school" style="font-variation-settings: 'FILL' 0;">school</span>
+</div>
+<h3 class="font-headline text-xl font-extrabold uppercase text-primary group-hover:text-on-primary mb-4 tracking-tight">SCHOOL</h3>
+<p class="font-body text-on-surface group-hover:text-on-primary leading-relaxed mt-auto">
+          Creative workshops, drama, dance, wellbeing courses.
+        </p>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest border border-primary p-8 flex flex-col group hover:bg-primary transition-colors duration-0">
+<div class="mb-6 text-primary group-hover:text-on-primary">
+<span class="material-symbols-outlined text-4xl" data-icon="desk" style="font-variation-settings: 'FILL' 0;">desk</span>
+</div>
+<h3 class="font-headline text-xl font-extrabold uppercase text-primary group-hover:text-on-primary mb-4 tracking-tight">WORKSPACE</h3>
+<p class="font-body text-on-surface group-hover:text-on-primary leading-relaxed mt-auto">
+          Permanent workspace, hot desks.
+        </p>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-lowest border border-primary p-8 flex flex-col group hover:bg-primary transition-colors duration-0">
+<div class="mb-6 text-primary group-hover:text-on-primary">
+<span class="material-symbols-outlined text-4xl" data-icon="stadium" style="font-variation-settings: 'FILL' 0;">stadium</span>
+</div>
+<h3 class="font-headline text-xl font-extrabold uppercase text-primary group-hover:text-on-primary mb-4 tracking-tight">VENUE</h3>
+<p class="font-body text-on-surface group-hover:text-on-primary leading-relaxed mt-auto">
+          Exhibitions, live music, pop-ups.
+        </p>
+</div>
+<!-- Card 5 -->
+<div class="bg-surface-container-lowest border border-primary p-8 flex flex-col group hover:bg-primary transition-colors duration-0">
+<div class="mb-6 text-primary group-hover:text-on-primary">
+<span class="material-symbols-outlined text-4xl" data-icon="toys" style="font-variation-settings: 'FILL' 0;">toys</span>
+</div>
+<h3 class="font-headline text-xl font-extrabold uppercase text-primary group-hover:text-on-primary mb-4 tracking-tight">CREATIVE PLAY &amp; CHILDCARE</h3>
+<p class="font-body text-on-surface group-hover:text-on-primary leading-relaxed mt-auto">
+          Playville @ Kidbrooke, Cotton Candy Crèche @ Barking.
+        </p>
+</div>
+<!-- Card 6 -->
+<div class="bg-surface-container-lowest border border-primary p-8 flex flex-col group hover:bg-primary transition-colors duration-0">
+<div class="mb-6 text-primary group-hover:text-on-primary">
+<span class="material-symbols-outlined text-4xl" data-icon="palette" style="font-variation-settings: 'FILL' 0;">palette</span>
+</div>
+<h3 class="font-headline text-xl font-extrabold uppercase text-primary group-hover:text-on-primary mb-4 tracking-tight">ARTIST IN RESIDENCE</h3>
+<p class="font-body text-on-surface group-hover:text-on-primary leading-relaxed mt-auto">
+          Studio support and mentoring.
+        </p>
+</div>
+</div>
+</section>
+<!-- Callout Section -->
+<section class="bg-primary text-on-primary py-16 px-8 text-center border-b border-primary">
+<p class="font-headline text-2xl md:text-4xl italic font-bold tracking-tight">
+      From the community. For the community.
+    </p>
+</section>
+<!-- Footer Component -->
+<footer class="bg-black text-white w-full px-8 py-16">
+  <div class="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+    <div class="flex flex-col gap-4">
+      <span class="font-montserrat font-extrabold text-xl uppercase tracking-tight">artFix</span>
+      <p class="text-xs uppercase tracking-widest text-white/60">Life As Art</p>
+      <p class="text-sm text-white/80 leading-relaxed">7 Durnford Street<br>Greenwich, SE10 9BF</p>
+    </div>
+    <div class="flex flex-col gap-3">
+      <p class="text-xs uppercase tracking-widest text-white/60 mb-2">Navigate</p>
+      <a href="index.html" class="text-sm text-white/80 hover:text-white transition-colors">Home</a>
+      <a href="about.html" class="text-sm text-white/80 hover:text-white transition-colors">About</a>
+      <a href="services.html" class="text-sm text-white/80 hover:text-white transition-colors">Services</a>
+      <a href="our-spaces.html" class="text-sm text-white/80 hover:text-white transition-colors">Our Spaces</a>
+      <a href="community-projects.html" class="text-sm text-white/80 hover:text-white transition-colors">Community Projects</a>
+      <a href="venue-hire.html" class="text-sm text-white/80 hover:text-white transition-colors">Venue Hire</a>
+      <a href="jobs.html" class="text-sm text-white/80 hover:text-white transition-colors">Jobs &amp; Opportunities</a>
+      <a href="contact.html" class="text-sm text-white/80 hover:text-white transition-colors">Contact</a>
+    </div>
+    <div class="flex flex-col gap-3">
+      <p class="text-xs uppercase tracking-widest text-white/60 mb-2">Contact</p>
+      <a href="tel:02082933096" class="text-sm text-white/80 hover:text-white transition-colors">Greenwich: 02082933096</a>
+      <a href="tel:02045474919" class="text-sm text-white/80 hover:text-white transition-colors">Kidbrooke: 02045474919</a>
+      <a href="mailto:info@artfix.org.uk" class="text-sm text-white/80 hover:text-white transition-colors">info@artfix.org.uk</a>
+      <div class="flex gap-4 mt-4">
+        <a href="https://www.facebook.com/artfixLondon" target="_blank" class="text-xs uppercase tracking-widest text-white/60 hover:text-white transition-colors">Facebook</a>
+        <a href="https://www.instagram.com/artfixlondon" target="_blank" class="text-xs uppercase tracking-widest text-white/60 hover:text-white transition-colors">Instagram</a>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-screen-xl mx-auto mt-12 pt-6 border-t border-white/20">
+    <p class="text-xs uppercase tracking-widest text-white/40">© 2025 artFix. All rights reserved.</p>
+  </div>
+</footer>
+</body></html>

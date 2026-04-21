@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Our Spaces - artFix</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;900&amp;family=Inter:wght@400;600;700&amp;family=Montserrat:wght@800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-primary-fixed-variant": "#e2e2e2",
+                        "on-primary-fixed": "#ffffff",
+                        "surface-container": "#eeeeee",
+                        "on-error-container": "#410002",
+                        "inverse-on-surface": "#f0f1f1",
+                        "on-primary": "#e2e2e2",
+                        "outline": "#777777",
+                        "inverse-primary": "#c6c6c6",
+                        "surface-container-highest": "#e2e2e2",
+                        "error": "#ba1a1a",
+                        "tertiary": "#3b3b3b",
+                        "on-background": "#1a1c1c",
+                        "on-secondary-fixed": "#1b1b1b",
+                        "on-tertiary-fixed": "#ffffff",
+                        "on-surface": "#1a1c1c",
+                        "surface-dim": "#dadada",
+                        "on-error": "#ffffff",
+                        "secondary-fixed-dim": "#ababab",
+                        "primary-fixed": "#5e5e5e",
+                        "secondary-container": "#d4d4d4",
+                        "inverse-surface": "#2f3131",
+                        "surface": "#f9f9f9",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed-dim": "#474747",
+                        "on-tertiary-fixed-variant": "#e2e2e2",
+                        "surface-container-high": "#e8e8e8",
+                        "surface-variant": "#e2e2e2",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed-dim": "#474747",
+                        "secondary-fixed": "#c6c6c6",
+                        "on-primary-container": "#ffffff",
+                        "surface-bright": "#f9f9f9",
+                        "on-secondary": "#ffffff",
+                        "on-surface-variant": "#474747",
+                        "on-secondary-fixed-variant": "#3b3b3b",
+                        "background": "#f9f9f9",
+                        "on-tertiary-container": "#ffffff",
+                        "secondary": "#5e5e5e",
+                        "on-secondary-container": "#1b1b1b",
+                        "surface-container-low": "#f3f3f4",
+                        "primary-container": "#3b3b3b",
+                        "on-tertiary": "#e2e2e2",
+                        "tertiary-container": "#747474",
+                        "tertiary-fixed": "#5e5e5e",
+                        "primary": "#000000",
+                        "surface-tint": "#5e5e5e",
+                        "outline-variant": "#c6c6c6"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    fontFamily: {
+                        "headline": ["Epilogue", "Montserrat", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        /* Enforce absolute brutalist overrides if tailwind misses */
+        * { border-radius: 0px !important; }
+    </style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,800;0,900;1,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+</head>
+<body class="bg-background text-on-background font-body min-h-screen flex flex-col antialiased">
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-black">
+  <div class="max-w-screen-xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="index.html" class="font-montserrat font-extrabold text-xl tracking-tight text-black uppercase">artFix</a>
+    <ul class="hidden md:flex items-center gap-6 text-xs font-semibold tracking-widest uppercase text-black">
+      <li><a href="index.html" class="hover:underline underline-offset-4">Home</a></li>
+      <li><a href="about.html" class="hover:underline underline-offset-4">About</a></li>
+      <li><a href="services.html" class="hover:underline underline-offset-4">Services</a></li>
+      <li><a href="our-spaces.html" class="hover:underline underline-offset-4">Our Spaces</a></li>
+      <li><a href="community-projects.html" class="hover:underline underline-offset-4">Community Projects</a></li>
+      <li><a href="venue-hire.html" class="hover:underline underline-offset-4">Venue Hire</a></li>
+      <li><a href="jobs.html" class="hover:underline underline-offset-4">Jobs &amp; Opportunities</a></li>
+      <li><a href="contact.html" class="hover:underline underline-offset-4">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+<main class="flex-grow pt-20" class="flex-grow pt-20 pt-24">
+<section class="bg-surface-container-lowest pt-32 pb-24 px-8 md:px-16 lg:px-24 flex flex-col lg:flex-row gap-16 lg:gap-24 items-start border-b border-surface-variant">
+<div class="w-full lg:w-1/2 flex flex-col pt-12">
+<h1 class="font-headline font-extrabold text-[4rem] lg:text-[6rem] leading-[0.85] tracking-tighter text-primary uppercase mb-12" style="font-family: 'Montserrat', sans-serif;">
+                    OUR<br/>SPACES
+                </h1>
+<p class="font-body text-xl lg:text-2xl text-on-background leading-relaxed max-w-xl font-medium">
+                    Delivering the artfix model — café, school, workspace, venue — to the heart of local communities across South East London.
+                </p>
+</div>
+<div class="w-full lg:w-1/2 h-[512px] lg:h-[716px] bg-surface relative overflow-hidden">
+<img class="absolute inset-0 w-full h-full object-cover grayscale contrast-125" data-alt="High contrast black and white architectural photography of an open-plan modern community cafe and workspace with natural light pouring through large windows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAONlbsfiNBiAj0qgzKjaNMeYTNj1vH7L4CllBw_u4OvbVhTHqIa6MkFZU2GMpAQqTc3QhVwOjGIZqF7_yRqarZvvu8coImo4-F5-fNmhmcNgwZuuRh18P4aEGebyzg-_9a1QCgdcPr-HAPGRImCCK8HwrEr0CB3DAo_Lqlmvq1IbIaCzp0uyC61f8-uI3_HyFbZnpLPOceYt1DyliW40JOD_CSHu3FWAVCah2xyiR0p8j9qmg-NjKRMDdxmBaVBCtD9LNAVaZjWQrx"/>
+</div>
+</section>
+<section class="bg-surface py-32 px-8 md:px-16 lg:px-24">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 max-w-7xl mx-auto">
+<article class="bg-surface-container-lowest border border-primary flex flex-col group hover:bg-surface-container transition-colors duration-300 linear">
+<div class="aspect-[4/3] w-full border-b border-primary relative overflow-hidden bg-surface-variant">
+<img class="w-full h-full object-cover grayscale group-hover:scale-105 transition-transform duration-700 ease-linear" data-alt="Black and white shot of a bustling local cafe counter with espresso machines and people mingling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCATuqc_6gJwc4K8W2WbXkEZMT7beZ3VOmui1W3cpCNb2bYCHLueinw-uzJhiqWUw--OTrm-OPkJnALSPc7dnUc7lGCe2Ug9vefiLRJ0RTeEMnNCQLeX8-OdJPf6FxALBWkTZitAxFfJIzm_wlH9RkC5dqOI1eGzpWtC4HDwcDVqUEKOnR3Ii2h_Vm4CEVoJaUCPeKIYPLdIKul-fKTFUa-P4PmzCQ8_Cmt0kOWyRhjHm5yO-DLvu1RaY-VexRUrNi-lIR8OkKuXiBp"/>
+</div>
+<div class="p-8 md:p-12 flex flex-col flex-grow">
+<h2 class="font-headline font-bold text-3xl md:text-4xl uppercase tracking-tighter text-primary mb-2">ARTFIX GREENWICH</h2>
+<p class="font-label text-sm uppercase tracking-widest text-outline mb-8 font-semibold">7 Durnford Street, SE10 9BF</p>
+<p class="font-body text-lg text-on-background leading-relaxed mt-auto">
+                            Our flagship venue nestled in the historic Greenwich market area. Featuring a vibrant cafe, dedicated co-working desks, and a versatile event space for local creatives.
+                        </p>
+</div>
+</article>
+<article class="bg-surface-container-lowest border border-primary flex flex-col group hover:bg-surface-container transition-colors duration-300 linear">
+<div class="aspect-[4/3] w-full border-b border-primary relative overflow-hidden bg-surface-variant">
+<img class="w-full h-full object-cover grayscale group-hover:scale-105 transition-transform duration-700 ease-linear" data-alt="Monochrome architectural view of a bright minimalist workspace with rows of desks and industrial ceiling design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGd2Gx36Ztvu2q4zyj8-ZSVQNPw_yhPCBDFhdogZYg26W3CRSmWzihCdaxB3J62KLyosVCA0NFheVuaQq1ILkZGhn26V6BkLmg5PB3IY5XoTSFNdlKCcSo0Aps4UVVD2dISqru4js_-xGKloHUYq36pBF6uKCqcbQTbg3ZBSSjjKe_4D20WlLL32dVL789xdA6T2Zz-O5S7JCqeXfrfrhpN_L5PbfSCVyqnEvbeDCV2sDaSHacRqA5vwu1kkn128zd8fiC7_O_wLgr"/>
+</div>
+<div class="p-8 md:p-12 flex flex-col flex-grow">
+<h2 class="font-headline font-bold text-3xl md:text-4xl uppercase tracking-tighter text-primary mb-2">ARTFIX KIDBROOKE</h2>
+<p class="font-label text-sm uppercase tracking-widest text-outline mb-8 font-semibold">1 Cranfield Walk, SE3 9EX</p>
+<p class="font-body text-lg text-on-background leading-relaxed mt-auto">
+                            A modern community hub serving the new Kidbrooke Village. Equipped with state-of-the-art learning facilities, pop-up retail spaces, and a welcoming community lounge.
+                        </p>
+</div>
+</article>
+<article class="bg-surface-container-lowest border border-primary flex flex-col group hover:bg-surface-container transition-colors duration-300 linear">
+<div class="aspect-[4/3] w-full border-b border-primary relative overflow-hidden bg-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-6xl text-outline">construction</span>
+</div>
+<div class="p-8 md:p-12 flex flex-col flex-grow">
+<h2 class="font-headline font-bold text-3xl md:text-4xl uppercase tracking-tighter text-primary mb-2">ARTFIX BARKING</h2>
+<p class="font-label text-sm uppercase tracking-widest text-primary mb-8 font-bold bg-surface-container-high inline-block self-start px-3 py-1">NEW LOCATION COMING SOON</p>
+<p class="font-body text-lg text-on-background leading-relaxed mt-auto">
+                            Expanding our blueprint to East London. This upcoming venue will focus on large-scale exhibition spaces and maker studios tailored for the local artist community.
+                        </p>
+</div>
+</article>
+<article class="bg-surface-container-lowest border border-primary flex flex-col opacity-50 grayscale hover:opacity-75 transition-opacity duration-300 linear">
+<div class="aspect-[4/3] w-full border-b border-primary relative overflow-hidden bg-surface-dim">
+<img class="w-full h-full object-cover" data-alt="Desaturated image of closed wooden double doors on a brick building exterior" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcOokitvfQeftKVoMYg5aMSzk_HdmVRGh5E24J8jafCICIA5ZEe4gPhdVkvonS69rigghhyg2A76alUqEk5Y8qwgBEnIYNna9oCWA0-O8iZImvoTAXxiVPTAaopF2O4jFl-4I_Enr9ItLCZmkXWIRmzJXprsFTj4nZ0Bn0_YyxKqttGG16sRH_SGyHiU1VpYqfgN_CJ0lJ3ZVB7US7BgamHot-yHvogYX3rxC98RBOwnWqXci2z_oimoUonkZiBY-6-5QCWEAxP9kd"/>
+<div class="absolute inset-0 bg-black/20 flex items-center justify-center">
+<span class="bg-primary text-on-primary font-label text-xs tracking-widest uppercase px-4 py-2">Closed</span>
+</div>
+</div>
+<div class="p-8 md:p-12 flex flex-col flex-grow">
+<h2 class="font-headline font-bold text-3xl md:text-4xl uppercase tracking-tighter text-primary mb-2">ARTFIX WOOLWICH</h2>
+<p class="font-label text-sm uppercase tracking-widest text-error mb-8 font-bold">Temporarily closed</p>
+<p class="font-body text-lg text-on-background leading-relaxed mt-auto">
+                            Our Woolwich location is currently undergoing structural renovations to better serve the community. We look forward to reopening with expanded facilities soon.
+                        </p>
+</div>
+</article>
+</div>
+</section>
+<section class="bg-primary w-full py-24 md:py-32 px-8 flex items-center justify-center">
+<h2 class="font-headline font-black text-[2.5rem] md:text-[5rem] lg:text-[7rem] tracking-tighter text-on-primary uppercase text-center leading-none">
+                MEET · LEARN · WORK · SHOW
+            </h2>
+</section>
+</main>
+<footer class="bg-black text-white w-full px-8 py-16">
+  <div class="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+    <div class="flex flex-col gap-4">
+      <span class="font-montserrat font-extrabold text-xl uppercase tracking-tight">artFix</span>
+      <p class="text-xs uppercase tracking-widest text-white/60">Life As Art</p>
+      <p class="text-sm text-white/80 leading-relaxed">7 Durnford Street<br>Greenwich, SE10 9BF</p>
+    </div>
+    <div class="flex flex-col gap-3">
+      <p class="text-xs uppercase tracking-widest text-white/60 mb-2">Navigate</p>
+      <a href="index.html" class="text-sm text-white/80 hover:text-white transition-colors">Home</a>
+      <a href="about.html" class="text-sm text-white/80 hover:text-white transition-colors">About</a>
+      <a href="services.html" class="text-sm text-white/80 hover:text-white transition-colors">Services</a>
+      <a href="our-spaces.html" class="text-sm text-white/80 hover:text-white transition-colors">Our Spaces</a>
+      <a href="community-projects.html" class="text-sm text-white/80 hover:text-white transition-colors">Community Projects</a>
+      <a href="venue-hire.html" class="text-sm text-white/80 hover:text-white transition-colors">Venue Hire</a>
+      <a href="jobs.html" class="text-sm text-white/80 hover:text-white transition-colors">Jobs &amp; Opportunities</a>
+      <a href="contact.html" class="text-sm text-white/80 hover:text-white transition-colors">Contact</a>
+    </div>
+    <div class="flex flex-col gap-3">
+      <p class="text-xs uppercase tracking-widest text-white/60 mb-2">Contact</p>
+      <a href="tel:02082933096" class="text-sm text-white/80 hover:text-white transition-colors">Greenwich: 02082933096</a>
+      <a href="tel:02045474919" class="text-sm text-white/80 hover:text-white transition-colors">Kidbrooke: 02045474919</a>
+      <a href="mailto:info@artfix.org.uk" class="text-sm text-white/80 hover:text-white transition-colors">info@artfix.org.uk</a>
+      <div class="flex gap-4 mt-4">
+        <a href="https://www.facebook.com/artfixLondon" target="_blank" class="text-xs uppercase tracking-widest text-white/60 hover:text-white transition-colors">Facebook</a>
+        <a href="https://www.instagram.com/artfixlondon" target="_blank" class="text-xs uppercase tracking-widest text-white/60 hover:text-white transition-colors">Instagram</a>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-screen-xl mx-auto mt-12 pt-6 border-t border-white/20">
+    <p class="text-xs uppercase tracking-widest text-white/40">© 2025 artFix. All rights reserved.</p>
+  </div>
+</footer>
+</body></html>

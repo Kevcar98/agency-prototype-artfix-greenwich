@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Venue Hire - artFix</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Montserrat:wght@800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#f9f9f9",
+                        "primary": "#000000",
+                        "on-secondary-fixed-variant": "#3b3b3b",
+                        "outline": "#777777",
+                        "primary-container": "#3b3b3b",
+                        "on-primary-container": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary": "#e2e2e2",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-surface": "#1a1c1c",
+                        "tertiary-fixed": "#5e5e5e",
+                        "background": "#f9f9f9",
+                        "on-tertiary": "#e2e2e2",
+                        "on-tertiary-container": "#ffffff",
+                        "surface-dim": "#dadada",
+                        "primary-fixed-dim": "#474747",
+                        "error": "#ba1a1a",
+                        "secondary-container": "#d4d4d4",
+                        "secondary": "#5e5e5e",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed": "#ffffff",
+                        "inverse-primary": "#c6c6c6",
+                        "surface-container-high": "#e8e8e8",
+                        "secondary-fixed-dim": "#ababab",
+                        "tertiary-container": "#747474",
+                        "on-surface-variant": "#474747",
+                        "tertiary-fixed-dim": "#474747",
+                        "on-tertiary-fixed": "#ffffff",
+                        "inverse-on-surface": "#f0f1f1",
+                        "on-secondary-container": "#1b1b1b",
+                        "tertiary": "#3b3b3b",
+                        "on-tertiary-fixed-variant": "#e2e2e2",
+                        "on-error-container": "#410002",
+                        "on-primary-fixed-variant": "#e2e2e2",
+                        "inverse-surface": "#2f3131",
+                        "on-error": "#ffffff",
+                        "surface": "#f9f9f9",
+                        "on-secondary-fixed": "#1b1b1b",
+                        "outline-variant": "#c6c6c6",
+                        "primary-fixed": "#5e5e5e",
+                        "surface-container-low": "#f3f3f4",
+                        "error-container": "#ffdad6",
+                        "on-background": "#1a1c1c",
+                        "secondary-fixed": "#c6c6c6",
+                        "surface-tint": "#5e5e5e",
+                        "surface-container": "#eeeeee",
+                        "surface-variant": "#e2e2e2"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "0px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Montserrat", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #f9f9f9; color: #1a1c1c; }
+        h1, h2, h3, h4, h5, h6, .font-headline { font-family: 'Montserrat', sans-serif; text-transform: uppercase; }
+        .label { font-family: 'Inter', sans-serif; text-transform: uppercase; letter-spacing: 0.05em; }
+    </style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,800;0,900;1,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+</head>
+<body class="bg-surface antialiased flex flex-col min-h-screen">
+<!-- TopNavBar -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-black">
+  <div class="max-w-screen-xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="index.html" class="font-montserrat font-extrabold text-xl tracking-tight text-black uppercase">artFix</a>
+    <ul class="hidden md:flex items-center gap-6 text-xs font-semibold tracking-widest uppercase text-black">
+      <li><a href="index.html" class="hover:underline underline-offset-4">Home</a></li>
+      <li><a href="about.html" class="hover:underline underline-offset-4">About</a></li>
+      <li><a href="services.html" class="hover:underline underline-offset-4">Services</a></li>
+      <li><a href="our-spaces.html" class="hover:underline underline-offset-4">Our Spaces</a></li>
+      <li><a href="community-projects.html" class="hover:underline underline-offset-4">Community Projects</a></li>
+      <li><a href="venue-hire.html" class="hover:underline underline-offset-4">Venue Hire</a></li>
+      <li><a href="jobs.html" class="hover:underline underline-offset-4">Jobs &amp; Opportunities</a></li>
+      <li><a href="contact.html" class="hover:underline underline-offset-4">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-[90px]" class="flex-grow pt-[90px] pt-24"> <!-- Offset for fixed nav -->
+<!-- Hero Section -->
+<section class="bg-surface-container-lowest w-full flex flex-col md:flex-row min-h-[716px]">
+<div class="w-full md:w-1/2 p-12 md:p-24 flex flex-col justify-center">
+<h1 class="font-headline font-extrabold text-5xl md:text-7xl tracking-widest text-primary leading-tight mb-8">
+                    HIRE A VENUE
+                </h1>
+<p class="font-body text-on-surface text-lg md:text-xl leading-relaxed max-w-2xl">
+                    Looking for a creative space to bring your idea to life? Whether it's an art exhibition, workshop, performance, or community gathering, artfix Greenwich and Kidbrooke offer vibrant, versatile venues to showcase your work.
+                </p>
+</div>
+<div class="w-full md:w-1/2 bg-surface-container-high h-[512px] md:h-auto relative">
+<img alt="Gallery Space" class="absolute inset-0 w-full h-full object-cover grayscale opacity-90 mix-blend-multiply" data-alt="Spacious modern art gallery with pristine white walls, polished concrete floors, and dramatic spotlighting illuminating a blank canvas" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsfoXwWye7joxJrRY9daeDbvr6LXcb-mr1Dm5dBVpeZTH2aP1UWOBpui6x98HSVyeOrnpRjvuVC4tLeJyXED-VmRmvqO1q2DuOP4bvWqkxdjCNPXosa9A5Nnu-gQOyE8QDQJueblKsaOsnU3BWLqVkE1RhBqwYCbC7EKz6-1N9wMHiDCPpIohnaObMz4dpQWG_Mw_KisOlRHsAhztO9iqpC3yUEmD_194L2leadkkn8c819682_KyKEvTobjIasPyAeD16u69Jv0Df"/>
+</div>
+</section>
+<!-- Marketing Support Section -->
+<section class="bg-surface w-full py-24 px-10 md:px-24">
+<div class="max-w-7xl mx-auto">
+<h2 class="font-headline font-extrabold text-3xl md:text-4xl tracking-widest text-primary mb-16 text-left border-b border-primary pb-4">
+                    WHAT'S INCLUDED
+                </h2>
+<div class="grid grid-cols-1 md:grid-cols-5 gap-6">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest border border-primary p-8 hover:bg-surface-container-high transition-colors duration-300 flex flex-col justify-between min-h-[200px]">
+<span class="material-symbols-outlined text-3xl text-primary mb-4">campaign</span>
+<h3 class="label text-primary font-bold text-sm leading-snug">Social Media Promotion</h3>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest border border-primary p-8 hover:bg-surface-container-high transition-colors duration-300 flex flex-col justify-between min-h-[200px]">
+<span class="material-symbols-outlined text-3xl text-primary mb-4">event_note</span>
+<h3 class="label text-primary font-bold text-sm leading-snug">Event Listings</h3>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest border border-primary p-8 hover:bg-surface-container-high transition-colors duration-300 flex flex-col justify-between min-h-[200px]">
+<span class="material-symbols-outlined text-3xl text-primary mb-4">design_services</span>
+<h3 class="label text-primary font-bold text-sm leading-snug">Poster &amp; Flyer Design</h3>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-lowest border border-primary p-8 hover:bg-surface-container-high transition-colors duration-300 flex flex-col justify-between min-h-[200px]">
+<span class="material-symbols-outlined text-3xl text-primary mb-4">mail</span>
+<h3 class="label text-primary font-bold text-sm leading-snug">Email Marketing</h3>
+</div>
+<!-- Card 5 -->
+<div class="bg-surface-container-lowest border border-primary p-8 hover:bg-surface-container-high transition-colors duration-300 flex flex-col justify-between min-h-[200px]">
+<span class="material-symbols-outlined text-3xl text-primary mb-4">storefront</span>
+<h3 class="label text-primary font-bold text-sm leading-snug">In-Venue Promotion</h3>
+</div>
+</div>
+</div>
+</section>
+<!-- Booking CTA Section -->
+<section class="bg-surface-container-lowest w-full py-32 px-10 flex flex-col items-center justify-center text-center">
+<h2 class="font-headline font-extrabold text-4xl md:text-6xl tracking-widest text-primary mb-12">
+                READY TO BOOK?
+            </h2>
+<div class="flex flex-col sm:flex-row gap-6">
+<button class="bg-primary text-on-primary label px-10 py-5 hover:bg-primary-container transition-colors duration-300">
+                    GET IN TOUCH
+                </button>
+<button class="bg-transparent text-primary border border-primary label px-10 py-5 hover:bg-surface-container-high transition-colors duration-300">
+                    VIEW SPACES
+                </button>
+</div>
+</section>
+<!-- Statement Band -->
+<section class="bg-primary w-full py-16 px-10 text-center">
+<h2 class="font-headline font-extrabold text-2xl md:text-5xl tracking-widest text-surface-container-lowest m-0">
+                YOUR VISION. OUR SPACE.
+            </h2>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-black text-white w-full px-8 py-16">
+  <div class="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+    <div class="flex flex-col gap-4">
+      <span class="font-montserrat font-extrabold text-xl uppercase tracking-tight">artFix</span>
+      <p class="text-xs uppercase tracking-widest text-white/60">Life As Art</p>
+      <p class="text-sm text-white/80 leading-relaxed">7 Durnford Street<br>Greenwich, SE10 9BF</p>
+    </div>
+    <div class="flex flex-col gap-3">
+      <p class="text-xs uppercase tracking-widest text-white/60 mb-2">Navigate</p>
+      <a href="index.html" class="text-sm text-white/80 hover:text-white transition-colors">Home</a>
+      <a href="about.html" class="text-sm text-white/80 hover:text-white transition-colors">About</a>
+      <a href="services.html" class="text-sm text-white/80 hover:text-white transition-colors">Services</a>
+      <a href="our-spaces.html" class="text-sm text-white/80 hover:text-white transition-colors">Our Spaces</a>
+      <a href="community-projects.html" class="text-sm text-white/80 hover:text-white transition-colors">Community Projects</a>
+      <a href="venue-hire.html" class="text-sm text-white/80 hover:text-white transition-colors">Venue Hire</a>
+      <a href="jobs.html" class="text-sm text-white/80 hover:text-white transition-colors">Jobs &amp; Opportunities</a>
+      <a href="contact.html" class="text-sm text-white/80 hover:text-white transition-colors">Contact</a>
+    </div>
+    <div class="flex flex-col gap-3">
+      <p class="text-xs uppercase tracking-widest text-white/60 mb-2">Contact</p>
+      <a href="tel:02082933096" class="text-sm text-white/80 hover:text-white transition-colors">Greenwich: 02082933096</a>
+      <a href="tel:02045474919" class="text-sm text-white/80 hover:text-white transition-colors">Kidbrooke: 02045474919</a>
+      <a href="mailto:info@artfix.org.uk" class="text-sm text-white/80 hover:text-white transition-colors">info@artfix.org.uk</a>
+      <div class="flex gap-4 mt-4">
+        <a href="https://www.facebook.com/artfixLondon" target="_blank" class="text-xs uppercase tracking-widest text-white/60 hover:text-white transition-colors">Facebook</a>
+        <a href="https://www.instagram.com/artfixlondon" target="_blank" class="text-xs uppercase tracking-widest text-white/60 hover:text-white transition-colors">Instagram</a>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-screen-xl mx-auto mt-12 pt-6 border-t border-white/20">
+    <p class="text-xs uppercase tracking-widest text-white/40">© 2025 artFix. All rights reserved.</p>
+  </div>
+</footer>
+</body></html>
