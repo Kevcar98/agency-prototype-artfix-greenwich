@@ -3,7 +3,7 @@
 <html class="light" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Our Spaces - artFix</title>
+<title>Our Spaces — artFix Greenwich</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;900&amp;family=Inter:wght@400;600;700&amp;family=Montserrat:wght@800&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
@@ -91,6 +91,23 @@
   <div class="max-w-screen-xl mx-auto px-6 py-4 flex items-center justify-between">
     <a href="index.html" class="font-montserrat font-extrabold text-xl tracking-tight text-black uppercase">artFix</a>
     <ul class="hidden md:flex items-center gap-6 text-xs font-semibold tracking-widest uppercase text-black">
+      <li><a href="index.html" class="hover:underline underline-offset-4">Home</a></li>
+      <li><a href="about.html" class="hover:underline underline-offset-4">About</a></li>
+      <li><a href="services.html" class="hover:underline underline-offset-4">Services</a></li>
+      <li><a href="our-spaces.html" class="hover:underline underline-offset-4">Our Spaces</a></li>
+      <li><a href="community-projects.html" class="hover:underline underline-offset-4">Community Projects</a></li>
+      <li><a href="venue-hire.html" class="hover:underline underline-offset-4">Venue Hire</a></li>
+      <li><a href="jobs.html" class="hover:underline underline-offset-4">Jobs &amp; Opportunities</a></li>
+      <li><a href="contact.html" class="hover:underline underline-offset-4">Contact</a></li>
+    </ul>
+    <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="md:hidden flex flex-col gap-1.5 p-2" aria-label="Toggle menu">
+      <span class="block w-6 h-0.5 bg-black"></span>
+      <span class="block w-6 h-0.5 bg-black"></span>
+      <span class="block w-6 h-0.5 bg-black"></span>
+    </button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-black">
+    <ul class="flex flex-col px-6 py-4 gap-4 text-xs font-semibold tracking-widest uppercase text-black">
       <li><a href="index.html" class="hover:underline underline-offset-4">Home</a></li>
       <li><a href="about.html" class="hover:underline underline-offset-4">About</a></li>
       <li><a href="services.html" class="hover:underline underline-offset-4">Services</a></li>
