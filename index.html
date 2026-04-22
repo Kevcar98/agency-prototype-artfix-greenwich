@@ -69,6 +69,7 @@
                     "full": "9999px"
             },
             "fontFamily": {
+                    "montserrat": ["Montserrat", "sans-serif"],
                     "headline": ["Montserrat", "sans-serif"],
                     "body": ["Inter", "sans-serif"],
                     "label": ["Inter", "sans-serif"]
@@ -82,7 +83,7 @@
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
         body { font-family: 'Inter', sans-serif; }
-        h1, h2, h3 { font-family: 'Montserrat', sans-serif; font-weight: 900; }
+        h1 { font-family: 'Montserrat', sans-serif !important; font-weight: 900 !important; }
         .label-text { font-family: 'Inter', sans-serif; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; font-size: 0.75rem; }
     </style>
 </head>
@@ -91,7 +92,7 @@
 <nav class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-black">
   <div class="max-w-screen-xl mx-auto px-6 py-4 flex items-center justify-between">
     <a href="index.html" class="font-montserrat font-extrabold text-xl tracking-tight text-black uppercase">artFix</a>
-    <ul class="hidden md:flex items-center gap-6 text-xs font-semibold tracking-widest uppercase text-black">
+    <ul class="hidden lg:flex items-center gap-4 text-xs font-semibold tracking-widest uppercase text-black">
       <li><a href="index.html" class="hover:underline underline-offset-4">Home</a></li>
       <li><a href="about.html" class="hover:underline underline-offset-4">About</a></li>
       <li><a href="services.html" class="hover:underline underline-offset-4">Services</a></li>
@@ -101,13 +102,13 @@
       <li><a href="jobs.html" class="hover:underline underline-offset-4">Jobs &amp; Opportunities</a></li>
       <li><a href="contact.html" class="hover:underline underline-offset-4">Contact</a></li>
     </ul>
-    <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="md:hidden flex flex-col gap-1.5 p-2" aria-label="Toggle menu">
+    <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="lg:hidden flex flex-col gap-1.5 p-2" aria-label="Toggle menu">
       <span class="block w-6 h-0.5 bg-black"></span>
       <span class="block w-6 h-0.5 bg-black"></span>
       <span class="block w-6 h-0.5 bg-black"></span>
     </button>
   </div>
-  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-black">
+  <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-black">
     <ul class="flex flex-col px-6 py-4 gap-4 text-xs font-semibold tracking-widest uppercase text-black">
       <li><a href="index.html" class="hover:underline underline-offset-4">Home</a></li>
       <li><a href="about.html" class="hover:underline underline-offset-4">About</a></li>
@@ -120,10 +121,10 @@
     </ul>
   </div>
 </nav>
-<main class="mt-20" class="mt-20 pt-24">
+<main class="pt-[65px]">
 <!-- Hero Section -->
-<section py-16 class="py-16 grid grid-cols-1 md:grid-cols-2 min-h-[819px] items-center border-b border-black">
-<div class="p-8 md:p-16 flex flex-col justify-center items-start border-r border-black h-full">
+<section class="grid grid-cols-1 md:grid-cols-2 border-b border-black">
+<div class="p-8 md:p-16 pt-12 flex flex-col items-start border-r border-black">
 <h1 class="font-montserrat font-extrabold text-5xl md:text-7xl uppercase tracking-tight text-black leading-none mb-6">artFix &mdash; Life As Art</h1>
 <p class="text-xl md:text-2xl font-normal text-primary/80 mb-10 max-w-lg">
                     artfix builds communities through the power of creativity.
@@ -181,6 +182,31 @@
 <div class="max-w-7xl mx-auto">
 <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
 <h2 class="text-4xl md:text-6xl tracking-tighter">WHO WE SERVE</h2>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0">
+<div class="border border-black p-10 flex flex-col gap-4 group hover:bg-black hover:text-white transition-colors duration-0">
+<span class="material-symbols-outlined text-3xl">palette</span>
+<h3 class="font-montserrat font-extrabold text-lg uppercase tracking-tight">Emerging Artists</h3>
+<p class="text-sm font-body leading-relaxed">Studio space, mentorship and exhibition opportunities for artists at every stage.</p>
+</div>
+<div class="border border-black border-l-0 p-10 flex flex-col gap-4 group hover:bg-black hover:text-white transition-colors duration-0">
+<span class="material-symbols-outlined text-3xl">groups</span>
+<h3 class="font-montserrat font-extrabold text-lg uppercase tracking-tight">Local Communities</h3>
+<p class="text-sm font-body leading-relaxed">Grassroots projects and community programmes rooted in South East London.</p>
+</div>
+<div class="border border-black border-l-0 p-10 flex flex-col gap-4 group hover:bg-black hover:text-white transition-colors duration-0">
+<span class="material-symbols-outlined text-3xl">school</span>
+<h3 class="font-montserrat font-extrabold text-lg uppercase tracking-tight">Schools &amp; Youth</h3>
+<p class="text-sm font-body leading-relaxed">Creative education and after-school programmes for young people aged 5–18.</p>
+</div>
+<div class="border border-black border-l-0 p-10 flex flex-col gap-4 group hover:bg-black hover:text-white transition-colors duration-0">
+<span class="material-symbols-outlined text-3xl">business_center</span>
+<h3 class="font-montserrat font-extrabold text-lg uppercase tracking-tight">Creative Businesses</h3>
+<p class="text-sm font-body leading-relaxed">Flexible hire, co-working and event production for creative enterprises.</p>
+</div>
+</div>
+</div>
+</section>
 <section class="bg-black w-full py-20 px-8 text-center">
   <p class="text-white font-montserrat font-extrabold text-2xl md:text-4xl uppercase tracking-widest">MEET &middot; LEARN &middot; WORK &middot; SHOW</p>
 </section>

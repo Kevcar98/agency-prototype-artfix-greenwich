@@ -69,6 +69,7 @@
                         "full": "0px"
                     },
                     "fontFamily": {
+                        "montserrat": ["Montserrat", "sans-serif"],
                         "headline": ["Montserrat", "sans-serif"],
                         "body": ["Inter", "sans-serif"],
                         "label": ["Inter", "sans-serif"]
@@ -79,7 +80,7 @@
     </script>
 <style>
         body { font-family: 'Inter', sans-serif; background-color: #f9f9f9; color: #1a1c1c; }
-        h1, h2, h3, h4, h5, h6, .font-headline { font-family: 'Montserrat', sans-serif; text-transform: uppercase; }
+        h1 { font-family: 'Montserrat', sans-serif !important; font-weight: 900 !important; }
         .label { font-family: 'Inter', sans-serif; text-transform: uppercase; letter-spacing: 0.05em; }
     </style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -87,12 +88,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,800;0,900;1,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 </head>
-<body class="bg-surface antialiased flex flex-col min-h-screen">
+<body class="bg-surface-container-lowest antialiased flex flex-col min-h-screen">
 <!-- TopNavBar -->
 <nav class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-black">
   <div class="max-w-screen-xl mx-auto px-6 py-4 flex items-center justify-between">
     <a href="index.html" class="font-montserrat font-extrabold text-xl tracking-tight text-black uppercase">artFix</a>
-    <ul class="hidden md:flex items-center gap-6 text-xs font-semibold tracking-widest uppercase text-black">
+    <ul class="hidden lg:flex items-center gap-4 text-xs font-semibold tracking-widest uppercase text-black">
       <li><a href="index.html" class="hover:underline underline-offset-4">Home</a></li>
       <li><a href="about.html" class="hover:underline underline-offset-4">About</a></li>
       <li><a href="services.html" class="hover:underline underline-offset-4">Services</a></li>
@@ -102,13 +103,13 @@
       <li><a href="jobs.html" class="hover:underline underline-offset-4">Jobs &amp; Opportunities</a></li>
       <li><a href="contact.html" class="hover:underline underline-offset-4">Contact</a></li>
     </ul>
-    <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="md:hidden flex flex-col gap-1.5 p-2" aria-label="Toggle menu">
+    <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="lg:hidden flex flex-col gap-1.5 p-2" aria-label="Toggle menu">
       <span class="block w-6 h-0.5 bg-black"></span>
       <span class="block w-6 h-0.5 bg-black"></span>
       <span class="block w-6 h-0.5 bg-black"></span>
     </button>
   </div>
-  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-black">
+  <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-black">
     <ul class="flex flex-col px-6 py-4 gap-4 text-xs font-semibold tracking-widest uppercase text-black">
       <li><a href="index.html" class="hover:underline underline-offset-4">Home</a></li>
       <li><a href="about.html" class="hover:underline underline-offset-4">About</a></li>
@@ -122,10 +123,10 @@
   </div>
 </nav>
 <!-- Main Content Canvas -->
-<main class="flex-grow pt-[90px]" class="flex-grow pt-[90px] pt-24"> <!-- Offset for fixed nav -->
+<main class="flex-grow pt-20"> <!-- Offset for fixed nav -->
 <!-- Hero Section -->
-<section py-16 class="py-16 bg-surface-container-lowest w-full flex flex-col md:flex-row min-h-[716px]">
-<div class="w-full md:w-1/2 p-12 md:p-24 flex flex-col justify-center">
+<section class="bg-surface-container-lowest w-full flex flex-col md:flex-row min-h-[716px]">
+<div class="w-full md:w-1/2 p-12 md:p-24 pt-12 md:pt-12 flex flex-col">
 <h1 class="font-montserrat font-extrabold text-5xl md:text-7xl uppercase tracking-tight text-black leading-none mb-6">Hire A Venue</h1>
 <p class="font-body text-on-surface text-lg md:text-xl leading-relaxed max-w-2xl">
                     Looking for a creative space to bring your idea to life? Whether it's an art exhibition, workshop, performance, or community gathering, artfix Greenwich and Kidbrooke offer vibrant, versatile venues to showcase your work.
@@ -136,7 +137,7 @@
 </div>
 </section>
 <!-- Marketing Support Section -->
-<section class="bg-surface w-full py-24 px-10 md:px-24">
+<section class="bg-surface-container-lowest w-full py-24 px-10 md:px-24">
 <div class="max-w-7xl mx-auto">
 <h2 class="font-headline font-extrabold text-3xl md:text-4xl tracking-widest text-primary mb-16 text-left border-b border-primary pb-4">
                     WHAT'S INCLUDED
